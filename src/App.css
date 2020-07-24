@@ -57,7 +57,7 @@
 }
 
 .home .box {
-  width: 360px;
+  width: 440px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -71,7 +71,7 @@
   text-transform: capitalize;
   text-align: left;
   display: block;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -84,7 +84,7 @@
 .home h2 {
   text-transform: capitalize;
   color: #eaeaea;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .home h3 {
@@ -219,7 +219,6 @@
 .home .my_pic {
   width: 250px;
   display: inline-block;
-  border-radius: 100%;
-  border: 1px solid #cf3b28;
   margin-top: 70px;
+  border-radius: 10px;
 }
