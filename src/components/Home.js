@@ -14,26 +14,6 @@ export default class Home extends Component {
     };
   }
 
-  doubletyping = () => {
-    let arr = [
-      ['my name is', ['Lahcen']],
-      ["it's pronounced ", ['la-sin']],
-      [
-        "I'm a",
-        [
-          'Computer science student at BU',
-          'full stack developer',
-          'home chef',
-          'beer enthusiast',
-        ],
-      ],
-    ];
-
-    console.log(arr[0][1][1]);
-
-    this.typingEffects(arr);
-  };
-
   typingEffects = (text) => {
     console.log('called');
     let k = 0;
@@ -73,49 +53,16 @@ export default class Home extends Component {
       if (k === text.length) k = 0;
     }, 200);
   };
-  /* 
-  typingEffects = (text) => {
-    let i = 0;
-    let j = 1;
-
-    setInterval(() => {
-      this.setState({
-        main: text[i].substring(0, j),
-      });
-
-      if (this.state.forward) j++;
-      if (j === text[i].length)
-        this.setState({
-          forward: false,
-        });
-
-      if (!this.state.forward) {
-        j--;
-      }
-
-      if (j === -1) {
-        j = 1;
-        i++;
-        this.setState({
-          main: '',
-          forward: true,
-        });
-      }
-      if (i === text.length) i = 0;
-    }, 500);
-  }; */
 
   componentDidMount() {
-    //  this.typingEffects(typingText);
-
-    this.doubletyping();
+    this.typingEffects(typingText);
   }
 
   render() {
     return (
       <div className='home'>
         <div className='home_container'>
-          <img className='my_pic' src={me} alt='mu picture' />
+          <img className='my_pic' src={me} alt='me' />
           <div className='box'>
             <h1>
               {this.state.main + ' '}

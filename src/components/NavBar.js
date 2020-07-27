@@ -15,10 +15,10 @@ export default class NavBar extends Component {
         </h1>
 
         <div className='menu'>
-          <a href={social.github}>
+          <a target='_blank' rel='noopener noreferrer' href={social.github}>
             <FontAwesomeIcon icon={['fab', 'github']} />
           </a>
-          <a href={social.linkedin}>
+          <a target='_blank' rel='noopener noreferrer' href={social.linkedin}>
             <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </a>
         </div>

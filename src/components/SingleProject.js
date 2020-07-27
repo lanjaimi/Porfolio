@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+import parse from 'html-react-parser';
 
 export default class SingleProject extends Component {
-  constructor() {
-    super();
-  }
   render() {
     const images = this.props.technologies.map((imgSrc, index) => {
       return <img key={index} src={imgSrc} alt={`'${imgSrc}'`} />;
@@ -14,7 +12,7 @@ export default class SingleProject extends Component {
         <div className='col-7'>
           <h2>{this.props.title}</h2>
           <label>Descreption:</label>
-          <p>{this.props.description}</p>
+          <p>{parse(this.props.description)}</p>
           <div className='technologies'>
             <label>Technologies used:</label>
             {images}
@@ -22,11 +20,21 @@ export default class SingleProject extends Component {
         </div>
         <div className='col-5'>
           <div className='links'>
-            <img src={this.props.image} alt='project image' />
-            <a href={this.props.source} className='source'>
+            <img src={this.props.image} alt='project' />
+            <a
+              href={this.props.source}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='source'
+            >
               Source Code
             </a>
-            <a href={this.props.demo} className='demo'>
+            <a
+              href={this.props.demo}
+              className='demo'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Live Demo
             </a>
           </div>
